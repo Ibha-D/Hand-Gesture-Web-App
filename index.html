@@ -1,0 +1,84 @@
+ 
+<html>
+  <head>
+    <title>Hand Gestures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+
+      <h3 class="btn btn-warning heading">HAND GESTURE APP
+        <br>
+        <span style="font-size: 30px;">&#9995;</span>
+        <span style="font-size: 30px;">&#9997;</span>
+        <span style="font-size: 30px;">&#128072;</span>
+        <span style="font-size: 30px;">&#128079;</span>
+        <span style="font-size: 30px;">&#9994;</span>
+        <span style="font-size: 40px;">&#128080;</span>
+      </h3>
+
+      <br><br>
+
+      <p style="font-size: 22px;" id="id">Take your selfie to generate hand gesture
+      	<br>
+          
+        <br>
+      </p>
+      
+      <div>
+      <p>Try these hand gestures: </p>
+      
+      <span>&#128077;</span> | 
+      <span>&#9996;</span> | 
+      <span>&#128070;</span>
+      
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam View - </label>
+
+        <div id="camera"></div>
+        <br><br>
+        <button class="btn btn-primary" onclick="takeSnapshot()">Capture Image </button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label> Prediction 1 - </label>
+        <br>
+        <p class="gesture" id="result_gesture_name1"></p>
+        <p class="gesture" id="update_gesture1"></p>
+
+        <label> Prediction 2 - </label>
+        <p class="emotion_name" id="result_emotion_name2"></p>
+        <p class="emoji" id="update_emoji2"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+      <button class="btn btn-success" onclick="check()">Predict Gesture</button>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
